@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Task Hazard Analysis (JHA)</title>
+
+<!-- PDF export library (only needed for the Download PDF button) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.14.0/html2pdf.bundle.min.js"></script>
+<!-- Real .docx (Word) export library (only needed for the Download Word button) -->
+<script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- STICKY TOOLBAR (stays visible while scrolling) -->
+<div class="toolbar">
+    <span class="toolbar-title">Pre-Task Hazard Analysis (JHA)</span>
+    <button class="btn btn-pdf" id="downloadPdfBtn" type="button">⬇ Download PDF</button>
+    <button class="btn btn-word" id="downloadWordBtn" type="button">⬇ Download Word</button>
+    <button class="btn btn-reset" type="reset" form="printable">↺ Reset Form</button>
+</div>
+
+<!-- PRINTABLE / EXPORTABLE FORM -->
+<form id="printable">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Pre-Task Hazard Analysis (JHA)</h1>
+        <div class="header-info">
+        <div class="info-field">
+            <span class="info-label">Project/Site Name:</span>
+            <input type="text" class="info-input" />
+        </div>
+            <div class="info-field">
+                <span class="info-label">Date:</span>
+                <input type="date" class="info-input" />
+            </div>
+        <div class="info-field">
+            <span class="info-label">Task/Activity:</span>
+            <input type="text" class="info-input" />
+        </div>
+        <div class="info-field">
+            <span class="info-label">Location:</span>
+            <input type="text" class="info-input" />
+        </div>
+        <div class="info-field">
+            <span class="info-label">Supervisor:</span>
+            <input type="text" class="info-input" />
+        </div>
+        <div class="info-field">
+            <span class="info-label">Crew Size:</span>
+            <input type="text" class="info-input" />
+        </div>
+        </div>
+    </div>
+
+    <!-- INFO BOX -->
+    <div class="info-box">
+        <div class="info-text">
+            <strong>Purpose:</strong> Identify hazards before starting work and establish control measures. Conduct JHA for new tasks, high-risk activities, or when conditions change. Review with entire crew before work begins.
+        </div>
+    </div>
+
+    <!-- PPE -->
+    <h2>Required Personal Protective Equipment (PPE)</h2>
+    <div class="ppe-grid">
+        <label class="ppe-item">
+            <span class="radio-wrap-small">
+                <input type="checkbox" name="ppe-1" value="Hard Hat" class="radio-hidden" />
+                <span class="radio-box-small"></span>
+            </span>
+            <span class="ppe-label">Hard Hat</span>
+        </label>
+        <label class="ppe-item">
+            <span class="radio-wrap-small">
+                <input type="checkbox" name="ppe-2" value="Safety Glasses" class="radio-hidden" />
+                <span class="radio-box-small"></span>
+            </span>
+            <span class="ppe-label">Safety Glasses</span>
+        </label>
+        <label class="ppe-item">
+            <span class="radio-wrap-small">
+                <input type="checkbox" name="ppe-3" value="Safety Vest" class="radio-hidden" />
+                <span class="radio-box-small"></span>
+            </span>
+            <span class="ppe-label">Safety Vest</span>
+        </label>
+        <label class="ppe-item">
+            <span class="radio-wrap-small">
+                <input type="checkbox" name="ppe-4" value="Safety Boots" class="radio-hidden" />
+                <span class="radio-box-small"></span>
+            </span>
+            <span class="ppe-label">Safety Boots</span>
+        </label>
+        <label class="ppe-item">
+            <span class="radio-wrap-small">
+                <input type="checkbox" name="ppe-5" value="Gloves" class="radio-hidden" />
+                <span class="radio-box-small"></span>
+            </span>
+            <span class="ppe-label">Gloves</span>
+        </label>
+        <label class="ppe-item">
+            <span class="radio-wrap-small">
+                <input type="checkbox" name="ppe-6" value="Hearing Protection" class="radio-hidden" />
+                <span class="radio-box-small"></span>
+            </span>
+            <span class="ppe-label">Hearing Protection</span>
+        </label>
+        <label class="ppe-item">
+            <span class="radio-wrap-small">
+                <input type="checkbox" name="ppe-7" value="Respirator/Mask" class="radio-hidden" />
+                <span class="radio-box-small"></span>
+            </span>
+            <span class="ppe-label">Respirator/Mask</span>
+        </label>
+        <label class="ppe-item">
+            <span class="radio-wrap-small">
+                <input type="checkbox" name="ppe-8" value="Fall Protection" class="radio-hidden" />
+                <span class="radio-box-small"></span>
+            </span>
+            <span class="ppe-label">Fall Protection</span>
+        </label>
+    </div>
+
+    <!-- HAZARD ANALYSIS TABLE -->
+    <h2>Hazard Analysis - Break Down Task into Steps</h2>
+    <table class="jha-table">
+        <tr>
+            <th style="width: 25%;">Job Step/Sequence</th>
+            <th style="width: 30%;">Potential Hazards</th>
+            <th style="width: 45%;">Control Measures/Safe Work Procedures</th>
+        </tr>
+        <tr>
+            <td data-label="Job Step/Sequence"><textarea placeholder="1. Describe first step of task..."></textarea></td>
+            <td data-label="Potential Hazards"><textarea placeholder="What can go wrong? (e.g., struck by, caught in, fall from, exposure to...)"></textarea></td>
+            <td data-label="Control Measures/Safe Work Procedures"><textarea placeholder="How to prevent/control? (e.g., barricade area, use proper tools, ensure training...)"></textarea></td>
+        </tr>
+        <tr>
+            <td data-label="Job Step/Sequence"><textarea placeholder="2. Describe next step..."></textarea></td>
+            <td data-label="Potential Hazards"><textarea placeholder="Identify hazards for this step..."></textarea></td>
+            <td data-label="Control Measures/Safe Work Procedures"><textarea placeholder="Describe control measures..."></textarea></td>
+        </tr>
+        <tr>
+            <td data-label="Job Step/Sequence"><textarea placeholder="3. Describe next step..."></textarea></td>
+            <td data-label="Potential Hazards"><textarea placeholder="Identify hazards for this step..."></textarea></td>
+            <td data-label="Control Measures/Safe Work Procedures"><textarea placeholder="Describe control measures..."></textarea></td>
+        </tr>
+        <tr>
+            <td data-label="Job Step/Sequence"><textarea placeholder="4. Describe next step..."></textarea></td>
+            <td data-label="Potential Hazards"><textarea placeholder="Identify hazards for this step..."></textarea></td>
+            <td data-label="Control Measures/Safe Work Procedures"><textarea placeholder="Describe control measures..."></textarea></td>
+        </tr>
+        <tr>
+            <td data-label="Job Step/Sequence"><textarea placeholder="5. Describe next step..."></textarea></td>
+            <td data-label="Potential Hazards"><textarea placeholder="Identify hazards for this step..."></textarea></td>
+            <td data-label="Control Measures/Safe Work Procedures"><textarea placeholder="Describe control measures..."></textarea></td>
+        </tr>
+    </table>
+
+    <!-- EMERGENCY -->
+    <h3>Emergency Procedures &amp; Equipment</h3>
+    <div class="emergency-section">
+        <div class="info-field">
+            <span class="info-label">Emergency Contact Number:</span>
+            <input type="text" class="info-input" placeholder="911 or site-specific number" />
+        </div>
+        <div class="info-field">
+            <span class="info-label">Nearest Hospital/Medical Facility:</span>
+            <input type="text" class="info-input" />
+        </div>
+        <div class="info-field">
+            <span class="info-label">First Aid Kit Location:</span>
+            <input type="text" class="info-input" />
+        </div>
+        <div class="info-field">
+            <span class="info-label">Fire Extinguisher Location:</span>
+            <input type="text" class="info-input" />
+        </div>
+        <div class="info-field">
+            <span class="info-label">Evacuation Assembly Point:</span>
+            <input type="text" class="info-input" />
+        </div>
+    </div>
+
+    <!-- CREW SIGN-IN -->
+    <h2>Crew Safety Briefing &amp; Sign-In</h2>
+    <p class="crew-note">All crew members must attend safety briefing and acknowledge understanding of hazards and controls before work begins.</p>
+    <div class="crew-signin">
+        <table class="crew-signin-table">
+            <tr>
+                <th style="width: 35%;">Print Name</th>
+                <th style="width: 40%;">Signature</th>
+                <th style="width: 25%;">Date</th>
+            </tr>
+            <tr>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="date" class="info-input" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="date" class="info-input" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="date" class="info-input" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="date" class="info-input" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="date" class="info-input" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="text" class="info-input" /></td>
+                <td><input type="date" class="info-input" /></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- SIGNATURE SECTION -->
+    <div class="signature-section">
+        <div class="signature-box">
+            <span class="signature-label">Prepared By (Supervisor/Competent Person):</span>
+            <div class="signature-line"></div>
+            <div class="info-field" style="margin-top: 12pt;">
+                <span class="info-label">Print Name:</span>
+                <input type="text" class="info-input" />
+            </div>
+            <div class="info-field">
+                <span class="info-label">Date &amp; Time:</span>
+                <div class="date-time-row">
+                    <input type="date" class="info-input" />
+                    <input type="time" class="info-input" />
+                </div>
+            </div>
+        </div>
+        <div class="signature-box">
+            <span class="signature-label">Reviewed/Approved By:</span>
+            <div class="signature-line"></div>
+            <div class="info-field" style="margin-top: 12pt;">
+                <span class="info-label">Print Name &amp; Title:</span>
+                <input type="text" class="info-input" />
+            </div>
+            <div class="info-field">
+                <span class="info-label">Date:</span>
+                <input type="date" class="info-input" />
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-grid">
+            <div>Page 1 of 1</div>
+            <div>Pre-Task Hazard Analysis (JHA)</div>
+            <div>Version 1.0 - 2026</div>
+        </div>
+        <div style="margin-top: 8pt; font-size: 7pt;">
+            A Job Hazard Analysis (JHA) helps identify, evaluate, and control hazards before work begins. Review and update as conditions change. Post completed JHA at work location for crew reference. This form is a planning tool - always follow OSHA standards and company safety policies.
+        </div>
+    </div>
+
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
