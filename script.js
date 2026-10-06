@@ -293,6 +293,8 @@
                     var labelEl = box.querySelector('.signature-label');
                     parts.push('<td style="width:50%;vertical-align:top;padding:8pt;border:1px dashed #999999;">');
                     parts.push('<p style="font-weight:bold;margin-bottom:16pt;">' + esc(labelEl ? labelEl.textContent.trim() : '') + '</p>');
+                    var sigEl = box.querySelector('.signature-input');
+                    parts.push('<p style="font-size:11pt;border-bottom:1px solid #333333;margin:0 0 8pt 0;">' + (sigEl && sigEl.value.trim() !== '' ? esc(sigEl.value) : '&nbsp;') + '</p>');
                     box.querySelectorAll('.info-field').forEach(function (f) {
                         var lab = f.querySelector('.info-label');
                         var labelText = lab ? lab.textContent.trim() : '';
